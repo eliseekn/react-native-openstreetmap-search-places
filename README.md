@@ -19,8 +19,7 @@ yarn add react-native-openstreetmap-search-places
 
 ```tsx
 import {useState} from 'react'
-import OpenStreetMapSearchPlace from 'react-native-openstreetmap-search-places'
-import {LocationType} from 'react-native-openstreetmap-search-places/interfaces'
+import {OpenStreetMapSearchPlace, LocationType} from 'react-native-openstreetmap-search-places'
 
 const MyComponent = () => {
     const [address, setAddress] = useState<string>('')

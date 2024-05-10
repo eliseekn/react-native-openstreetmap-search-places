@@ -53,7 +53,8 @@ const MyComponent = () => {
                 marginTop: 2,
             }}
             searchBarInputStyle={{fontFamily: 'Roboto'}}
-            searchResultLabelStyle={{fontSize: 14,}}
+            searchResultLabelStyle={{fontSize: 14}}
+            modalStyle={{borderRadius: 14}}
             loaderColor='blue'
             loaderSize='small'
             modalBgColor='white'
@@ -84,6 +85,7 @@ export default MyComponent
 | searchBarStyle         | StyleProp<TextStyle> | False    | Search bar component style                      |
 | searchBarInputStyle    | StyleProp<TextStyle> | False    | Search input text component style               |
 | searchResultLabelStyle | StyleProp<TextStyle> | False    | Search result label style                       |
+| modalStyle             | StyleProp<ViewStyle> | False    | Search results modal custom style               |
 | loaderColor            | String               | False    | Loader color (default blue)                     |
 | loaderSize             | String or Number     | True     | Loader size (eg: 12, small or large)            |
 | loaderColor            | String               | True     | Loader color                                    |

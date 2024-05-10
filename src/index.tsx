@@ -36,6 +36,7 @@ type Props = {
     searchBarStyle?: StyleProp<TextStyle>
     searchBarInputStyle?: StyleProp<TextStyle>
     searchResultLabelStyle?: StyleProp<TextStyle>
+    modalStyle?: StyleProp<ViewStyle>
     loaderColor?: string
     loaderSize: number | 'small' | 'large'
     modalBgColor: string
@@ -59,6 +60,7 @@ const OpenStreetMapSearchPlace: React.FC<Props> = (
         searchBarStyle,
         searchBarInputStyle,
         searchResultLabelStyle,
+        modalStyle,
         loaderColor= 'blue',
         loaderSize,
         modalBgColor = 'white',
@@ -111,7 +113,7 @@ const OpenStreetMapSearchPlace: React.FC<Props> = (
             <Portal>
                 <Dialog visible={show} onDismiss={() => setShow(false)} style={{backgroundColor: modalBgColor}} dismissable={dismissable}>
                     <ScrollView showsVerticalScrollIndicator={false}>
-                        <Dialog.Content>
+                        <Dialog.Content style={modalStyle}>
                             <Searchbar
                                 value={value}
                                 onChangeText={onChange}

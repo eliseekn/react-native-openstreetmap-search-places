@@ -1,0 +1,45 @@
+{
+  "name": "react-native-openstreetmap-search-places",
+  "version": "1.0.0",
+  "description": "A React Native component to search places using OpenStreetMap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliseekn/react-native-openstreetmap-search-places.git"
+  },
+  "keywords": [
+    "React",
+    "Native",
+    "search",
+    "places",
+    "locations",
+    "OpenStreetMap"
+  ],
+  "author": {
+    "name": "N'Guessan Kouadio Elisée",
+    "email": "eliseekn@gmail.com",
+    "url": "https://eliseekn.netlify.app"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eliseekn/react-native-openstreetmap-search-places/issues"
+  },
+  "homepage": "https://github.com/eliseekn/react-native-openstreetmap-search-places#readme",
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447",
+  "dependencies": {
+    "@react-native-community/eslint-config": "^3.2.0",
+    "eslint": "^9.2.0",
+    "react": "^18.3.1",
+    "react-native": "^0.74.1",
+    "react-native-paper": "^5.12.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "typescript": "^5.4.5"
+  }
+}

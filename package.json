@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "react-native-openstreetmap-search-places",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A React Native component to search places using OpenStreetMap",
   "main": "./src/index.tsx",
   "scripts": {
@@ -13,11 +13,8 @@
     "url": "git+https://github.com/eliseekn/react-native-openstreetmap-search-places.git"
   },
   "keywords": [
-    "React",
-    "Native",
-    "search",
+    "React Native",
     "places",
-    "locations",
     "OpenStreetMap"
   ],
   "author": {
@@ -32,9 +29,11 @@
   "homepage": "https://github.com/eliseekn/react-native-openstreetmap-search-places#readme",
   "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447",
   "dependencies": {
-    "react": "^18.3.1",
-    "react-native": "^0.74.1",
     "react-native-paper": "^5.12.3"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-native": "^0.74.1"
   },
   "devDependencies": {
     "@babel/plugin-transform-private-methods": "^7.24.1",

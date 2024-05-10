@@ -1,7 +1,24 @@
 import React, {useEffect, useState} from 'react'
 import {ActivityIndicator, Dialog, Portal, RadioButton, Searchbar, Text, TextInput} from 'react-native-paper'
 import {ScrollView, StyleProp, TextStyle, View, ViewStyle} from 'react-native'
-import {LocationType} from "./interfaces"
+
+type LocationType = {
+    place_id: number
+    licence: string
+    osm_type: string
+    osm_id: number
+    lat: string
+    lon: string
+    category: string
+    type: string
+    place_rank: number
+    importance: number
+    addresstype: string
+    name: string
+    display_name: string
+    address: any
+    boundingbox: string[]
+}
 
 type Props = {
     value: string
@@ -143,4 +160,4 @@ const OpenStreetMapSearchPlace: React.FC<Props> = (
     )
 }
 
-module.exports = OpenStreetMapSearchPlace
+export {OpenStreetMapSearchPlace, LocationType}

@@ -1,4 +1,6 @@
 # OpenStreetMapSearchPlace
+[![NPM version](https://img.shields.io/npm/v/react-native-openstreetmap-search-places.svg?style=flat)](https://www.npmjs.com/package/react-native-openstreetmap-search-places) 
+[![NPM downloads](https://img.shields.io/npm/dm/react-native-openstreetmap-search-places.svg?style=flat)](https://npmjs.org/package/react-native-openstreetmap-search-places) 
 
 A React Native component to search places using OpenStreetMap
 

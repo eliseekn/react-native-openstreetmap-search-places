@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "react-native-openstreetmap-search-places",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A React Native component to search places using OpenStreetMap",
   "main": "./src/index.tsx",
   "scripts": {

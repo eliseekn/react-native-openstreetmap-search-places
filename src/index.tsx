@@ -41,6 +41,8 @@ type Props = {
     loaderSize: number | 'small' | 'large'
     modalBgColor: string
     dismissable: boolean
+    icon?: string
+    iconSize?: number
 }
 
 const OpenStreetMapSearchPlace: React.FC<Props> = (
@@ -64,7 +66,9 @@ const OpenStreetMapSearchPlace: React.FC<Props> = (
         loaderColor= 'blue',
         loaderSize,
         modalBgColor = 'white',
-        dismissable = true
+        dismissable = true,
+        icon = 'map-marker',
+        iconSize= 24
     }
 ) => {
     const [show, setShow] = useState<boolean>(false)
@@ -108,6 +112,7 @@ const OpenStreetMapSearchPlace: React.FC<Props> = (
                 contentStyle={contentStyle}
                 onTouchStart={() => setShow(true)}
                 outlineStyle={outlineStyle}
+                left={icon && <TextInput.Icon icon={icon} size={iconSize} />}
             />
 
             <Portal>

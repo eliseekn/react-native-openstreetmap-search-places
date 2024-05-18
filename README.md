@@ -2,6 +2,10 @@
 
 A React Native component to search places using OpenStreetMap
 
+## Demo
+
+<img src="./Screenrecorder-2024-05-18-14-29-50-492.gif" width="250">
+
 ## Requirements
 ```bash
 node v20.13.1
@@ -90,6 +94,8 @@ export default MyComponent
 | loaderColor            | String               | True     | Loader color                                    |
 | modalBgColor           | String               | True     | Modal background color                          |
 | dismissable            | Boolean              | True     | Set if modal dismissable                        |
+| icon                   | String               | False    | Input text component left icon. [(See scons list)](https://callstack.github.io/react-native-paper/docs/guides/icons)                 |
+| iconSize               | Number               | False    | Input text component left icon size             |
 
 ## License
 

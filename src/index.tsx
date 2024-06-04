@@ -87,7 +87,7 @@ const OpenStreetMapSearchPlace: React.FC<Props> = (
     }, [value])
 
     useEffect(() => {
-        const location: LocationType | undefined = data.find((datum: any) => datum.place_id.toString() === selectedValue)
+        const location: LocationType | undefined = data?.find((datum: any) => datum.place_id.toString() === selectedValue)
 
         if (location) {
             setLocation(location)
@@ -95,8 +95,8 @@ const OpenStreetMapSearchPlace: React.FC<Props> = (
     }, [selectedValue])
 
     const selectedLabel = (): string => {
-        const location: LocationType | undefined = data.find((datum: any) => datum.place_id.toString() === selectedValue)
-        return location ? location.display_name : ''
+        const location: LocationType | undefined = data?.find((datum: any) => datum.place_id.toString() === selectedValue)
+        return location ? location?.display_name : ''
     }
 
     return (

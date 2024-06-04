@@ -2,6 +2,11 @@
 
 All notable changes to `react-native-openstreetmap-search-places` will be documented in this file
 
+## 1.0.10
+
+- Fix typo
+- Remove value and onChange props
+
 ## 1.0.9
 
 - Add input text component icon

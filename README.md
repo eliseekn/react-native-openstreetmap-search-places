@@ -28,13 +28,11 @@ import {useState} from 'react'
 import {OpenStreetMapSearchPlace, LocationType} from 'react-native-openstreetmap-search-places'
 
 const MyComponent = () => {
-    const [address, setAddress] = useState<string>('')
     const [location, setLocation] = useState<LocationType | undefined>(undefined)
 
     return (
         <OpenStreetMapSearchPlace
-            value={address}
-            onChange={setAddress}
+            location={location}
             setLocation={setLocation}
             lang='en'
             noResultFoundText='No result found'
@@ -73,31 +71,29 @@ export default MyComponent
 
 ## Props
 
-| Property               | Type                 | Required | Description                                     |
-|------------------------|----------------------|----------|-------------------------------------------------|
-| value                  | String               | True     | Value to search                                 |
-| onChange               | function             | True     | Set searched value                              |
-| location               | LocationType         | True     | Location data of searched value                 |
-| setLocation            | function             | True     | Set location value of searched value            |
-| lang                   | String               | False    | Language used to search places (default en)     |
-| noResultFoundText      | String               | False    | Text to display when no result found            |
-| placeHolder            | String               | False    | Input text component placeholder                |
-| searchPlaceHolder      | String               | False    | Search input text placeholder                   |
-| mode                   | String               | True     | Text input style display (eg: outlined or flat) |
-| style                  | StyleProp<TextStyle> | False    | Input text component style                      |
-| contentStyle           | StyleProp<TextStyle> | False    | Input text component content style              |
-| outlineStyle           | StyleProp<ViewStyle> | False    | Input text component outline style              |
-| searchBarStyle         | StyleProp<TextStyle> | False    | Search bar component style                      |
-| searchBarInputStyle    | StyleProp<TextStyle> | False    | Search input text component style               |
-| searchResultLabelStyle | StyleProp<TextStyle> | False    | Search result label style                       |
-| modalStyle             | StyleProp<ViewStyle> | False    | Search results modal custom style               |
-| loaderColor            | String               | False    | Loader color (default blue)                     |
-| loaderSize             | String or Number     | True     | Loader size (eg: 12, small or large)            |
-| loaderColor            | String               | True     | Loader color                                    |
-| modalBgColor           | String               | True     | Modal background color                          |
-| dismissable            | Boolean              | True     | Set if modal dismissable                        |
-| icon                   | String               | False    | Input text component left icon. [(See scons list)](https://callstack.github.io/react-native-paper/docs/guides/icons)                 |
-| iconSize               | Number               | False    | Input text component left icon size             |
+| Property               | Type                 | Required | Description                                                                                                          |
+|------------------------|----------------------|----------|----------------------------------------------------------------------------------------------------------------------|
+| location               | LocationType         | True     | Location data of searched value                                                                                      |
+| setLocation            | function             | True     | Set location value of searched value                                                                                 |
+| lang                   | String               | False    | Language used to search places (default en)                                                                          |
+| noResultFoundText      | String               | False    | Text to display when no result found                                                                                 |
+| placeHolder            | String               | False    | Input text component placeholder                                                                                     |
+| searchPlaceHolder      | String               | False    | Search input text placeholder                                                                                        |
+| mode                   | String               | True     | Text input style display (eg: outlined or flat)                                                                      |
+| style                  | StyleProp<TextStyle> | False    | Input text component style                                                                                           |
+| contentStyle           | StyleProp<TextStyle> | False    | Input text component content style                                                                                   |
+| outlineStyle           | StyleProp<ViewStyle> | False    | Input text component outline style                                                                                   |
+| searchBarStyle         | StyleProp<TextStyle> | False    | Search bar component style                                                                                           |
+| searchBarInputStyle    | StyleProp<TextStyle> | False    | Search input text component style                                                                                    |
+| searchResultLabelStyle | StyleProp<TextStyle> | False    | Search result label style                                                                                            |
+| modalStyle             | StyleProp<ViewStyle> | False    | Search results modal custom style                                                                                    |
+| loaderColor            | String               | False    | Loader color (default blue)                                                                                          |
+| loaderSize             | String or Number     | True     | Loader size (eg: 12, small or large)                                                                                 |
+| loaderColor            | String               | True     | Loader color                                                                                                         |
+| modalBgColor           | String               | True     | Modal background color                                                                                               |
+| dismissable            | Boolean              | True     | Set if modal dismissable                                                                                             |
+| icon                   | String               | False    | Input text component left icon. [(See icons list)](https://callstack.github.io/react-native-paper/docs/guides/icons) |
+| iconSize               | Number               | False    | Input text component left icon size                                                                                  |
 
 ## License
 

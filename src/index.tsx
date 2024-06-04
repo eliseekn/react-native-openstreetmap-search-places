@@ -21,8 +21,6 @@ type LocationType = {
 }
 
 type Props = {
-    value: string
-    onChange: (text: string) => void
     location?: LocationType
     setLocation: (location: LocationType) => void
     lang?: string
@@ -47,14 +45,7 @@ type Props = {
 
 const OpenStreetMapSearchPlace: React.FC<Props> = (
     {
-        value,
-        onChange,
-        location,
         setLocation,
-        lang = 'en',
-        noResultFoundText = 'No result found',
-        placeHolder = 'Search place',
-        searchPlaceHolder = 'Enter address',
         mode,
         style,
         contentStyle,
@@ -63,14 +54,20 @@ const OpenStreetMapSearchPlace: React.FC<Props> = (
         searchBarInputStyle,
         searchResultLabelStyle,
         modalStyle,
-        loaderColor= 'blue',
         loaderSize,
+        location = undefined,
+        lang = 'en',
+        noResultFoundText = 'No result found',
+        placeHolder = 'Search place',
+        searchPlaceHolder = 'Enter address',
+        loaderColor= 'blue',
         modalBgColor = 'white',
         dismissable = true,
         icon = 'map-marker',
         iconSize= 24
     }
 ) => {
+    const [value, setValue] = React.useState<string>('')
     const [show, setShow] = useState<boolean>(false)
     const [data, setData] = useState<LocationType[]>([])
     const [loading, setLoading] = useState<boolean>(false)
@@ -121,7 +118,7 @@ const OpenStreetMapSearchPlace: React.FC<Props> = (
                         <Dialog.Content style={modalStyle}>
                             <Searchbar
                                 value={value}
-                                onChangeText={onChange}
+                                onChangeText={setValue}
                                 placeholder={searchPlaceHolder}
                                 inputStyle={searchBarInputStyle}
                                 style={searchBarStyle}

@@ -81,7 +81,14 @@ const OpenStreetMapSearchPlace: React.FC<Props> = (
                 `https://nominatim.openstreetmap.org/search?q=${value}&format=jsonv2&addressdetails=1&accept-language=${lang}&dedupe=1&limit=9`,
             )
                 .then((res: Response) => res.json())
-                .then(d => setData(d))
+                .then(d =>
+                    setData(
+                        d.filter(
+                            (obj: any, index: any, self: any) =>
+                                index === self.findIndex((t: any) => t.display_name === obj.display_name),
+                        ),
+                    ),
+                )
                 .finally(() => setLoading(false))
         }
     }, [value])
